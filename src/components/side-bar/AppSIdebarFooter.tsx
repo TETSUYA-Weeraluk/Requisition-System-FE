@@ -13,9 +13,18 @@ import {
   SidebarMenuItem,
   useSidebar,
 } from "../ui/sidebar";
+import useAuthStore from "@/stores/auth-store";
+import { useNavigate } from "@tanstack/react-router";
 
 const AppSidebarFooter = () => {
+  const navigate = useNavigate();
   const { isMobile } = useSidebar();
+  const { setIsAuthenticated } = useAuthStore();
+
+  const handleLogOut = () => {
+    setIsAuthenticated(false);
+    navigate({ to: "/login", replace: true });
+  };
 
   return (
     <SidebarFooter>
@@ -49,7 +58,7 @@ const AppSidebarFooter = () => {
               align="end"
               sideOffset={4}
             >
-              <DropdownMenuItem>
+              <DropdownMenuItem onClick={handleLogOut}>
                 <LogOut />
                 Log out
               </DropdownMenuItem>
