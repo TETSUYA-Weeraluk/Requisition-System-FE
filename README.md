@@ -1,6 +1,6 @@
-# Boiler Plate Frontend
+# Corporate Asset & Requisition System Project 
 
-Frontend Template สำหรับการเริ่มต้นโปรเจกต์ React ด้วย Vite, TypeScript และ library ต่างๆ ที่จำเป็น
+เป็นระบบสำหรับบริษัท เพื่อให้พนักงานเบิกอุปกรณ์ (Laptop, Monitor, Mouse) โดยมีหัวหน้าคอยอนุมัติ และ Admin เป็นคนจัดการ Stock
 
 ## 🚀 Tech Stack
 
@@ -39,16 +39,6 @@ pnpm run lint
 
 ```
 - Waiting.....
-```
-
-## 🔧 Configuration
-
-### Environment Variables
-
-สร้างไฟล์ `.env` ใน root directory:
-
-```env
-VITE_API_URL=your_api_url_here
 ```
 
 ## 📝 Features
