@@ -1,4 +1,4 @@
-import * as React from "react";
+import { ThemeProvider } from "@/components/theme/theme-provider";
 import { Outlet, createRootRoute } from "@tanstack/react-router";
 
 export const Route = createRootRoute({
@@ -7,8 +7,8 @@ export const Route = createRootRoute({
 
 function RootComponent() {
   return (
-    <React.Fragment>
+    <ThemeProvider defaultTheme="dark" storageKey="tetsuya-theme">
       <Outlet />
-    </React.Fragment>
+    </ThemeProvider>
   );
 }
